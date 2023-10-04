@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD700"
+    tools:context=".MainActivity">
+
+    <!-- Page border line -->
+
+    <!-- Clock Icon -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@android:color/black" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="527dp"
+        android:contentDescription="Clock Icon"
+        android:src="@drawable/ic_clock"
+        app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_margin="16dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="80sp" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Customize the MaterialButton styles -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startStopButton"
+            style="@style/StopwatchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start"
+            app:icon="@drawable/ic_play"
+            app:iconTint="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resetButton"
+            style="@style/StopwatchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset"
+            app:icon="@drawable/ic_reset"
+            app:iconTint="@android:color/white" />
+
+    </LinearLayout>
+</RelativeLayout>
